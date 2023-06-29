@@ -20,6 +20,10 @@ var finalPassword = []
 function generatePassword() {
   //prompt user for password length and confirm character types
     var passwordLength = window.prompt("How many characters between 8-128 would you like to use?"); 
+    if(passwordLength < 8 || passwordLength > 128) {
+      alert('Password must be between 8 and 128 characters.');
+      return
+    }
     var passwordUpper = window.confirm('Would you like capital letters in your password?');
     var passwordLower = window.confirm("Would you like lower case letters in your password?");
     var passwordSpecialChar = window.confirm("Would you like special characters in your password?");
@@ -37,15 +41,19 @@ function generatePassword() {
     if (passwordNum === true) {
       characterPool = characterPool.concat(numericCharacters);
     }
+    if (passwordUpper === false && passwordLower === false && passwordSpecialChar === false && passwordNum === false) {
+      alert('You must select at least one of the previous prompts. Please try again.')
+    }
     console.log(characterPool)
   //create for loop that runs the amount of times as the answer of the user password length and then pull a random character from our potential charracter array and insert into a final password array
 for(var i = 0; i < passwordLength; i++) {
   var randomIndex = Math.floor(Math.random() * characterPool.length);
   var indexValue = characterPool[randomIndex];
-  finalPassword.push(indexValue)
+  finalPassword.push(indexValue);
+  console.log(finalPassword);
 }
 
-  return 'Hello'
+  return finalPassword.join('');
 }
 
 
