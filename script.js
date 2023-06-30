@@ -17,13 +17,13 @@ function writePassword() {
 }
 
 //define character pool and final password variables
-var characterPool = []
-var finalPassword = []
 var wrongAns = 'Please, try again. :)' 
 
 // perform the process of generating a password
 function generatePassword() {
   //prompt user for password length and confirm character types
+    var characterPool = []
+    var finalPassword = []
     var passwordLength = window.prompt("How many characters between 8-128 would you like to use?"); 
     if(passwordLength < 8 || passwordLength > 128) {
       alert('Password must be between 8 and 128 characters.');
@@ -51,6 +51,9 @@ function generatePassword() {
       return wrongAns;
     }
     console.log(characterPool)
+
+// //clear data from characterPool upon click of "generate password"
+
 
 //create for loop that runs the amount of times as the answer of the user password length and then pull a random character from our potential charracter array and insert into a final password array
 for(var i = 0; i < passwordLength; i++) {
