@@ -60,11 +60,13 @@ for(var i = 0; i < passwordLength; i++) {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+
+
 //need button to pop up a window.prompt asking user to select number between 8-128
 //need to store answer
 //need to then ask if user wants capital letters
 //store answer
-//need to then ask if use wants lower case letters
+//need to then ask if user wants lower case letters
 //store answer
 //does user want numbers
 //store answer
