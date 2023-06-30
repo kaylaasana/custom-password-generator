@@ -1,92 +1,59 @@
-# 03 JavaScript: Password Generator
+## Custom Password Generator
 
-## Your Task
+## Description
 
-This week’s challenge requires you to modify starter code to create an application that enables employees to generate random passwords based on criteria that they’ve selected. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished, responsive user interface that adapts to multiple screen sizes.
+This page displays a custom password generator built using HTML, CSS and Javascipt. The page will generate a password based on the users selections when prompted with various questions.
 
-The password can include special characters. If you’re unfamiliar with these, see this [list of password special characters](https://www.owasp.org/index.php/Password_special_characters) from the OWASP Foundation.
+<!-- ## Table of Contents (Optional)
 
-## User Story
+If your README is long, add a table of contents to make it easy for users to find what they need.
 
-```
-AS AN employee with access to sensitive data
-I WANT to randomly generate a password that meets certain criteria
-SO THAT I can create a strong password that provides greater security
-```
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
 
-## Acceptance Criteria
+## Installation
 
-```
-GIVEN I need a new, secure password
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
-WHEN asked for character types to include in the password
-THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
-```
+What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running. -->
 
-## Mock-Up
+## Usage
 
-The following image shows the web application's appearance and functionality:
+To use the custom password generator the user must first click the generate password button (example below):
 
-![The Password Generator application displays a red button to "Generate Password".](./Assets/03-javascript-challenge-demo.png)
 
-## Grading Requirements
+![alt text](./assets/main-screen.png);
 
-This challenge is graded based on the following criteria: 
+The page will then present the user with a series of prompts. The first, to pick a number between 8-128. The second,
 
-### Technical Acceptance Criteria: 40%
+<!-- ## Credits
 
-* Satisfies all of the preceding acceptance criteria plus the following:
+List your collaborators, if any, with links to their GitHub profiles.
 
-  * The challenge should not produce any errors in the console when you inspect it using Chrome DevTools.
+If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
 
-### Deployment: 32%
+If you followed tutorials, include links to those here as well.
 
-* Application deployed at live URL.
+## License
 
-* Application loads with no errors.
+The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
 
-* Application GitHub URL submitted.
+---
 
-* GitHub repository that contains application code.
+🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
 
-### Application Quality: 15%
+## Badges
 
-* Application user experience is intuitive and easy to navigate.
+![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
 
-* Application user interface style is clean and polished.
+Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
 
-* Application resembles the mock-up functionality provided in the challenge instructions.
+## Features
 
-### Repository Quality: 13%
+If your project has a lot of features, list them here.
 
-* Repository has a unique name.
+## How to Contribute
 
-* Repository follows best practices for file structure and naming conventions.
+If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
 
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality readme file with description, screenshot, and link to deployed application.
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository, with a unique name and a readme describing the project.
-
-- - -
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+## Tests -->

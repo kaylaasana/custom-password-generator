@@ -1,5 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+
+// define character variables
 var numericCharacters =  ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 var specialCharacters = [  '@',  '%',  '+',  '\\',  '/',  "'",  '!',  '#',  '$',  '^',  '?',  ':',  ',',  ')',  '(',  '}',  '{',  ']',  '[',  '~',  '-',  '_',  '.'];
 var lowerCase = [  'a',  'b',  'c',  'd',  'e',  "f",  'g',  'h',  'i',  'j',  'k',  'l',  'm',  'n',  'o',  'p',  'q',  'r',  's',  't',  'u',  'v',  'w',  'x',  'y',  'z'];
@@ -14,15 +16,18 @@ function writePassword() {
 
 }
 
+//define character pool and final password variables
 var characterPool = []
 var finalPassword = []
+var wrongAns = 'Please, try again. :)' 
 
+// perform the process of generating a password
 function generatePassword() {
   //prompt user for password length and confirm character types
     var passwordLength = window.prompt("How many characters between 8-128 would you like to use?"); 
     if(passwordLength < 8 || passwordLength > 128) {
       alert('Password must be between 8 and 128 characters.');
-      return
+      return wrongAns
     }
     var passwordUpper = window.confirm('Would you like capital letters in your password?');
     var passwordLower = window.confirm("Would you like lower case letters in your password?");
@@ -42,10 +47,12 @@ function generatePassword() {
       characterPool = characterPool.concat(numericCharacters);
     }
     if (passwordUpper === false && passwordLower === false && passwordSpecialChar === false && passwordNum === false) {
-      alert('You must select at least one of the previous prompts. Please try again.')
+      alert('You must select at least one of the previously presented prompts.');
+      return wrongAns;
     }
     console.log(characterPool)
-  //create for loop that runs the amount of times as the answer of the user password length and then pull a random character from our potential charracter array and insert into a final password array
+
+//create for loop that runs the amount of times as the answer of the user password length and then pull a random character from our potential charracter array and insert into a final password array
 for(var i = 0; i < passwordLength; i++) {
   var randomIndex = Math.floor(Math.random() * characterPool.length);
   var indexValue = characterPool[randomIndex];
@@ -56,20 +63,5 @@ for(var i = 0; i < passwordLength; i++) {
   return finalPassword.join('');
 }
 
-
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-
-
-//need button to pop up a window.prompt asking user to select number between 8-128
-//need to store answer
-//need to then ask if user wants capital letters
-//store answer
-//need to then ask if user wants lower case letters
-//store answer
-//does user want numbers
-//store answer
-//does user want special characters
-//store answer
-//generate password based on answers
