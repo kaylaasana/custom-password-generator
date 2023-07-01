@@ -1,4 +1,4 @@
-// Assignment Code
+//this is targeting the ID tag of 'generate' in the HTML and stating it as the definition of the variable 'generateBtn'.
 var generateBtn = document.querySelector("#generate");
 
 // define character variables
@@ -15,15 +15,15 @@ function writePassword() {
   passwordText.value = password;
 
 }
-
-//define character pool and final password variables
+//define display message if user does not choose a number between 8-128 or select one of the following prompts.
 var wrongAns = 'Please, try again. :)' 
 
 // perform the process of generating a password
 function generatePassword() {
-  //prompt user for password length and confirm character types
+  //define character pool and final password variables
     var characterPool = []
     var finalPassword = []
+    //prompt user for password length and confirm character types
     var passwordLength = window.prompt("How many characters between 8-128 would you like to use?"); 
     if(passwordLength < 8 || passwordLength > 128) {
       alert('Password must be between 8 and 128 characters.');
@@ -33,7 +33,7 @@ function generatePassword() {
     var passwordLower = window.confirm("Would you like lower case letters in your password?");
     var passwordSpecialChar = window.confirm("Would you like special characters in your password?");
     var passwordNum = window.confirm("Would you like numbers in your password?");
-  //create conditionals (if statement) that make a character type available if user selects OK (creates potential character pool)
+  //create conditionals (if statements) that make a character type available if user selects OK (creates potential character pool)
     if (passwordUpper === true) {
       characterPool = characterPool.concat(upperCase);
     }
@@ -47,24 +47,19 @@ function generatePassword() {
       characterPool = characterPool.concat(numericCharacters);
     }
     if (passwordUpper === false && passwordLower === false && passwordSpecialChar === false && passwordNum === false) {
-      alert('You must select at least one of the previously presented prompts.');
+      alert('You must select at least one of the previously provided character types to include in your password.');
       return wrongAns;
     }
     console.log(characterPool)
-
-// //clear data from characterPool upon click of "generate password"
-
-
-//create for loop that runs the amount of times as the answer of the user password length and then pull a random character from our potential charracter array and insert into a final password array
+//create for loop that runs the amount of times as the answer of the user password length and then pulls a random character from our potential charracter array and insert into a final password array
 for(var i = 0; i < passwordLength; i++) {
   var randomIndex = Math.floor(Math.random() * characterPool.length);
   var indexValue = characterPool[randomIndex];
   finalPassword.push(indexValue);
   console.log(finalPassword);
 }
-
   return finalPassword.join('');
 }
 
-// Add event listener to generate button
+// upon click of the Generate button, after the prompts complete, the password will be written in the text box
 generateBtn.addEventListener("click", writePassword);
