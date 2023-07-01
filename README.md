@@ -4,18 +4,10 @@
 
 This page displays a custom password generator built using HTML, CSS and Javascipt. The page will generate a password based on the users selections when prompted with various questions.
 
-<!-- ## Table of Contents (Optional)
+## Table of Contents
 
-If your README is long, add a table of contents to make it easy for users to find what they need.
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
-
-## Installation
-
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running. -->
+- [Usage](#Usage)
+- [Link to page](#Link)
 
 ## Usage
 
@@ -24,36 +16,25 @@ To use the custom password generator the user must first click the generate pass
 
 ![alt text](./assets/main-screen.png);
 
-The page will then present the user with a series of prompts. The first, to pick a number between 8-128. The second,
+The page will then present the user with a series of prompts. The first, to pick a number between 8-128. The second, to choose it they would like capital letters. The third, if they would like lower case letters. The fourth, if they would like special characters. And the last will ask if they would like numbers included in their password. 
 
-<!-- ## Credits
+Below is an example of what the first input prompt will look like:
 
-List your collaborators, if any, with links to their GitHub profiles.
+![alt text](./assets/first-prompt.png);
 
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
+Below is an example of what the following four prompts will look like:
 
-If you followed tutorials, include links to those here as well.
+![alt](./assets/confirm-prompt.png);
 
-## License
+Should the user choose a number outside of the peramiters set for character length or fail to select at least one character type, the page will inform them that they must select a number between 8-128 or choose at least one character type, depending on which one they did not complete correctly, and the following message will display in place of the generated password.
 
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
+![alt](./assets/try-again.png)
 
----
+Once the user have properly answered the prompts, the text box will display a custom password based on their selections.
 
-🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
 
-## Badges
+## Link to Live Custom Password Generator
 
-![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
+To access this webpage, please click the link below:
 
-Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
 
-## Features
-
-If your project has a lot of features, list them here.
-
-## How to Contribute
-
-If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
-
-## Tests -->
